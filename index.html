@@ -85,7 +85,7 @@
  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head> 
 <body class="bg-stone-100 text-stone-800 dark:bg-abstract-darkbg dark:text-stone-100 min-h-screen flex flex-col font-sans transition-colors duration-200">
-
+<button onclick="testInsert()">Test Database</button>
   <header class="sticky top-0 z-40 bg-white/95 dark:bg-abstract-darkcard/95 backdrop-blur-md border-b border-stone-200 dark:border-abstract-cardborder shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <!-- Seal & Title -->
@@ -2891,8 +2891,8 @@ supabaseKey
 console.log("Supabase connected");
 </script>
   <script>
-const supabaseUrl = "YOUR_PROJECT_URL";
-const supabaseKey = "YOUR_ANON_KEY";
+const supabaseUrl = "https://cxdueyatcyjrqotlxfhj.supabase.co/rest/v1/";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHVleWF0Y3lqcnFvdGx4ZmhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1Nzc2NjQsImV4cCI6MjEwNjE1MzY2NH0.l3pUEeZKjJPBbDnZi9JFXYcTgbJj5HfFQsHLoLURUME";
  
 const supabaseClient = supabase.createClient(
 supabaseUrl,
@@ -2914,6 +2914,12 @@ marks: 5
  
 console.log(data);
 console.log(error);
+  if (error) {
+alert("Insert failed");
+} else {
+alert("Insert successful");
+}
+}
 }
 </script>
  
