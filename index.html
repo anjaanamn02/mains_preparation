@@ -2872,60 +2872,40 @@ ${userText}
         t.classList.add('translate-y-24', 'opacity-0');
         t.classList.remove('translate-y-0', 'opacity-100');
       }, 3500);
-    }
-  </script>
-  <script>
+    }<script>
 console.log("JavaScript is working");
- 
-console.log(window.supabase);
-</script>
-  <script>
-console.log("JavaScript is working");
-console.log(window.supabase);
- 
-const supabaseUrl = "https://cxdueyatcyjrqotlxfhj.supabase.co/rest/v1/";
+
+const supabaseUrl = "https://cxdueyatcyjrqotlxfhj.supabase.co";
 const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHVleWF0Y3lqcnFvdGx4ZmhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1Nzc2NjQsImV4cCI6MjEwNjE1MzY2NH0.l3pUEeZKjJPBbDnZi9JFXYcTgbJj5HfFQsHLoLURUME";
- 
+
 const supabaseClient = supabase.createClient(
-supabaseUrl,
-supabaseKey
+  supabaseUrl,
+  supabaseKey
 );
- 
+
 console.log("Supabase connected");
-</script>
-  <script>
-const supabaseUrl = "https://cxdueyatcyjrqotlxfhj.supabase.co/rest/v1/";
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHVleWF0Y3lqcnFvdGx4ZmhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1Nzc2NjQsImV4cCI6MjEwNjE1MzY2NH0.l3pUEeZKjJPBbDnZi9JFXYcTgbJj5HfFQsHLoLURUME";
- 
-const supabaseClient = supabase.createClient(
-supabaseUrl,
-supabaseKey
-);
- 
-console.log("Supabase connected");
- 
+
 async function testInsert() {
-const { data, error } = await supabaseClient
-.from('answers')
-.insert([
-{
-question: 'Test Question',
-answer: 'This is my first answer',
-marks: 5
-}
-]);
- 
-console.log(data);
-console.log(error);
+  const { data, error } = await supabaseClient
+    .from('answers')
+    .insert([
+      {
+        question: 'Test Question',
+        answer: 'This is my first answer',
+        marks: 5
+      }
+    ]);
+
+  console.log(data);
+  console.log(error);
+
   if (error) {
-alert("Insert failed");
-} else {
-alert("Insert successful");
-}
-}
+    alert("Insert failed");
+  } else {
+    alert("Insert successful");
+  }
 }
 </script>
- 
 <button onclick="testInsert()">
 Test Database
 </button>
