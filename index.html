@@ -2876,5 +2876,19 @@ console.log("JavaScript is working");
  
 console.log(window.supabase);
 </script>
+  <script>
+console.log("JavaScript is working");
+console.log(window.supabase);
+ 
+const supabaseUrl = "https://cxdueyatcyjrqotlxfhj.supabase.co/rest/v1/";
+const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4ZHVleWF0Y3lqcnFvdGx4ZmhqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTA1Nzc2NjQsImV4cCI6MjEwNjE1MzY2NH0.l3pUEeZKjJPBbDnZi9JFXYcTgbJj5HfFQsHLoLURUME";
+ 
+const supabaseClient = supabase.createClient(
+supabaseUrl,
+supabaseKey
+);
+ 
+console.log("Supabase connected");
+</script>
 </body>
 </html>
